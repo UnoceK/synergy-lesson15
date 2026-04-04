@@ -5,10 +5,16 @@ class Transport:
         self.mileage = mileage
 
 class Autobus(Transport):
-    pass  
+    def Print(self):
+        print(f"Название автомобиля: {self.name} Скорость: {self.max_speed} Пробег: {self.mileage}")
+
 
 name = input("Введите название: ")
 speed = int(input("Введите максимальную скорость: "))
 mile = int(input("Введите пробег: "))
-autobus = Autobus(name, speed, mile)
-print(f"Название автомобиля: {autobus.name} Скорость: {autobus.max_speed} Пробег: {autobus.mileage}")
+autobus = Autobus(name,speed,mile)
+autobus.max_speed = speed
+autobus.name = name
+autobus.mileage = mile
+autobus.Print()
+
